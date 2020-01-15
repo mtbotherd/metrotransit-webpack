@@ -13,7 +13,8 @@ const config = {
 
 	// Entry
 	entry: {
-		app: './src/index.js'
+		app: './src/index.js',
+		splitchunk: './src/splitchunk.js'
 	},
 
 	// Loaders
@@ -45,6 +46,22 @@ const config = {
 						loader: 'sass-loader'
 					}
 				]
+			},
+
+			// Image files
+			{
+				test: /\.(png|svg|jpg|gif)$/,
+				use: [
+					'file-loader',
+				],
+			},
+
+			// Font files
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
+				use: [
+					'file-loader'
+				]
 			}
 		]
 	},
@@ -66,7 +83,7 @@ const config = {
 	// Reload on file change
 	watch: true,
 	watchOptions: {
-		ignored: '/node_modules'
+		ignored: 'node_modules'
 	},
 	devtool: 'inline-source-map',
 	devServer: {
@@ -77,7 +94,14 @@ const config = {
 	// Output
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js'
+		filename: '[name].bundle.js'
+	},
+
+	// Optimize
+	optimazation: {
+		splitChunks: {
+			chunks: 'all'
+		}
 	}
 }
 
