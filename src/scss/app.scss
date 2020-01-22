@@ -1,0 +1,16 @@
+// Custom bootstrap variable overrides
+@import "bs-variables";
+
+// Bootstrap and its default variables
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+// Proxima-nova font
+@import url(https://use.typekit.net/tev0qmq.css);
+
+// Application styles
+@import "mixins";
+@import "fonts";
+@import "global";
+@import "animations";
+@import "autocomplete";
+@import "hero-backgrounds";

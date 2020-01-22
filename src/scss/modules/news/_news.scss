@@ -1,0 +1,25 @@
+.news-list {
+  .articleDisplayTitle {
+    h2 {
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      border-bottom: 1px solid #e3e3e0;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    &:last-child > p {
+      border-bottom: none;
+    }
+  }
+}
+
+/* News story */
+.articleDisplayText {
+  p img {
+    width: 100%;
+    height: auto;
+  }
+}

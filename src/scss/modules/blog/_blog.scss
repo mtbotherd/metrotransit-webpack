@@ -1,0 +1,45 @@
+.bcatlist {
+  display: none;
+}
+
+h2.blogtitle {
+  margin-bottom: 0.25rem;
+}
+
+.blogtags a:not(:last-child)::after {
+  content: " | ";
+}
+
+.blogtext {
+  border-bottom: 1px solid #e3e3e0;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.blogitem:nth-last-child(2) div > .blogtext {
+  border-bottom: none;
+}
+
+.blogwrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.blogpager {
+  font-size: 1.1rem;
+  margin-top: 15px;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 30px;
+  }
+
+  .modulepager {
+    .SelectedPage,
+    .ModulePager {
+      border: 1px solid #e3e3e0;
+      padding: 0.2rem;
+      line-height: 2;
+    }
+  }
+}

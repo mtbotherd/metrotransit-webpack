@@ -1,0 +1,25 @@
+.secondary {
+  background-color: $blue;
+
+  .page-title {
+    @include media-breakpoint-up(lg) {
+      height: 170px;
+    }
+
+    h1 {
+      color: $white;
+      margin-bottom: 0;
+      padding: 3.125rem 0 0.75rem 0;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 6rem;
+        padding-bottom: 1.5rem;
+      }
+    }
+
+    .route-number {
+      color: $yellow;
+      text-transform: uppercase;
+    }
+  }
+}
