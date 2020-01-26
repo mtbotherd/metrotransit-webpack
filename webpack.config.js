@@ -9,7 +9,10 @@ const path = require("path");
 const globSync = require("glob").sync;
 
 module.exports = (env, options) => ({
-  entry: ["./src/index.js"],
+  //entry: ["./src/index.js"],
+  entry: {
+	  index: './src/index.js'
+  },
   devServer: {
     contentBase: "./dist"
   },
@@ -46,7 +49,7 @@ module.exports = (env, options) => ({
         ]
 	  },
 	  {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf)$/,
         use: [
           {
             loader: "file-loader",
